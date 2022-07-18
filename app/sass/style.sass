@@ -29,7 +29,8 @@
         padding-left: 35px
         padding-right: 45px
     &__list-link
-        @extend %title
+        font-weight: 700
+        font-family: 'Montserrat', sans-serif
         color: rgba(54, 56, 56, 0.9)
         line-height: 22px
     &__list-link--active
@@ -170,6 +171,7 @@
     &__logo
         margin-bottom: 40px
         display: inline-block
+        width: 97px
     &__title
         color: $title
         @extend %title
@@ -199,13 +201,17 @@
     padding: 13px 14px
     &__list
         display: flex
-        z-index: 999
+        z-index: 10
         position: relative
+        overflow-x: auto
+    &__item
+        position: relative
+        padding-right: 8px
     &__item::after
         content: "/"
-        margin-left: -1px
-        margin-right: 2px
+        margin-left: 1px
         z-index: 4
+        position: absolute
     &__item:last-child::after
         display: none
     &__link
@@ -304,7 +310,7 @@
         right: 0
         bottom: 0
         background-color: rgba(#fff, .7)
-        padding: 10px
+        padding: 0 10px
         display: flex
         flex-direction: column
         align-items: center
@@ -430,7 +436,7 @@
     &__btn
         margin: 0 13px
         background-color: transparent
-        border: 1px solid #454647
+        border: 1px solid rgba(#454647, .6)
         border-radius: 20px
         cursor: pointer
         padding: 6px 16px
@@ -485,7 +491,8 @@
         color: $title
         font-size: 24px
         line-height: 38px
-        @extend %title
+        font-weight: 700
+        font-family: 'Montserrat', sans-serif
 
 .about
     &__prev
@@ -604,6 +611,9 @@
 .map
     margin-top: -53px
     margin-bottom: 50px
+    iframe
+        height: 578px
+
 
 .contact
     padding-bottom: 100px
@@ -1036,6 +1046,5 @@
     color: #363838
     transition: .3s
     border: 1px solid #FFEF35
-
 
 @import 'media'
